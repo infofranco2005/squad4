@@ -10,6 +10,11 @@ criptRes.criptografar = (senha) => {
   return iv.toString('base64') + ':' + crypted
 }
 
+
+
+
+
+
 criptRes.descriptografar = (senha) => {
   const parts = senha.split(':')
   const decipher = crypto.createDecipheriv(config.dados_criptografar.algoritmo, config.dados_criptografar.segredo, new Buffer.from(parts[0], 'base64'))

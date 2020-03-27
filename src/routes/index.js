@@ -16,6 +16,8 @@ router.get('/', (req, res) => {
   })
 })
 
+
+
 router.use('/users', users)
 router.use('/logs', logs)
 router.use('/auth', auth)
