@@ -1,14 +1,5 @@
 build:
   docker:
-    web: Dockerfile
-    mariadb:
-      image: mariadb
-      ports:
-        - "3306:3306"
-      volumes:
-        - ./db/:/docker-entrypoint-initdb.d/
-      environment:
-        MYSQL_ROOT_PASSWORD: 1234
-        MYSQL_DATABASE: codenation_development
+    web: docker-compose
 run:
   web: bundle exec puma -C config/puma.rb
